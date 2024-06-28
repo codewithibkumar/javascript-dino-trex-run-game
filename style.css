@@ -1,0 +1,32 @@
+@keyframes slideright {
+    from {
+        background-position: 70000%;
+    }
+    to{
+        background-position: 0%;
+    }
+    
+}
+
+
+#desert
+{
+position: absolute;
+background-image: url("t-rex-background-removebg-preview.png");
+height: 150px;
+width: 100%;
+
+animation: slideright 1200s infinite linear;
+
+
+}
+.dino{
+    
+    background-image: url("t-rex-new.png");
+    height: 38px;
+    width: 40px;
+    position: absolute;
+    bottom: 0;
+    
+    
+}
