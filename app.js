@@ -53,14 +53,11 @@ document.addEventListener('DOMContentLoaded',()=>{
         grid.appendChild(obstacle);
         obstacle.style.left = obstaclePosition+"px";
 
-<<<<<<< HEAD
-=======
         let delayTimer = setInterval(function(){
             obstaclePosition -=10;
             obstacle.style.left = obstaclePosition + "px";
         },20)
 
->>>>>>> obstaclefeature
     }
     generateObstacles();
 
