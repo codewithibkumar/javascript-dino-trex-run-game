@@ -22,8 +22,8 @@ document.addEventListener('DOMContentLoaded',()=>{
     let position = 0;
     function jump(){
         isJumping = true;
-     let count = 0;
-     let timerId = setInterval(function(){
+        let count = 0;
+        let timerId = setInterval(function(){
         //move down
         if(count === 15){
             clearInterval(timerId);
@@ -46,5 +46,15 @@ document.addEventListener('DOMContentLoaded',()=>{
         dino.style.bottom = position + "px";
      },20)
     }
-     document.addEventListener('keydown',control);
+    function generateObstacles(){
+        let obstaclePosition = 1000;
+        const obstacle = document.createElement('div');
+        obstacle.classList.add('obstacle');
+        grid.appendChild(obstacle);
+        obstacle.style.left = obstaclePosition+"px";
+
+    }
+    generateObstacles();
+
+    document.addEventListener('keydown',control);
 })

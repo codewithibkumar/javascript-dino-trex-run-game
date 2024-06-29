@@ -31,3 +31,10 @@ animation: slideright 1200s infinite linear;
     
     
 }
+.obstacle{
+    background-image: url("cacti.png");
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    bottom: 0;
+}
