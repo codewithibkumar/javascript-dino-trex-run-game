@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded',()=>{
     const dino = document.querySelector(".dino");
     const grid = document.querySelector(".grid");
+    const alert = document.getElementById("alert"); 
     let gravity = 0.9;
     let isJumping = false;
 
@@ -53,7 +54,17 @@ document.addEventListener('DOMContentLoaded',()=>{
         grid.appendChild(obstacle);
         obstacle.style.left = obstaclePosition+"px";
 
-        let delayTimer = setInterval(function(){
+        let timerId = setInterval(function(){
+            if(obstaclePosition < 0){
+                clearInterval(timerId);
+                isGameOver = true;
+                alert.innerHTML = 'Game Over';
+
+                //remove all children
+                while(grid.firstChild){
+                    grid.removeChild(grid.lastChild);
+                }
+            }
             obstaclePosition -=10;
             obstacle.style.left = obstaclePosition + "px";
         },20)
