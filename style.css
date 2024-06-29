@@ -15,7 +15,7 @@ position: absolute;
 background-image: url("t-rex-background-removebg-preview.png");
 height: 150px;
 width: 100%;
-
+bottom: 0;
 animation: slideright 1200s infinite linear;
 
 
@@ -29,4 +29,11 @@ animation: slideright 1200s infinite linear;
     bottom: 0;
     
     
+}
+.obstacle{
+    background-image: url("cacti.png");
+    width: 60px;
+    height: 60px;
+    bottom: 0;
+    position:absolute;
 }
