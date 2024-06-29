@@ -1,9 +1,11 @@
 document.addEventListener('DOMContentLoaded',()=>{
+    let randomeTime = Math.random() * 4000;
     const dino = document.querySelector(".dino");
     const grid = document.querySelector(".grid");
     const alert = document.getElementById("alert"); 
     let gravity = 0.9;
     let isJumping = false;
+    let isGameOver = false;
 
     function control(e){
         if(e.keyCode === 32){
@@ -67,8 +69,9 @@ document.addEventListener('DOMContentLoaded',()=>{
             }
             obstaclePosition -=10;
             obstacle.style.left = obstaclePosition + "px";
+           
         },20)
-
+        if(!isGameOver) setTimeout(generateObstacles,randomeTime);
     }
     generateObstacles();
 
