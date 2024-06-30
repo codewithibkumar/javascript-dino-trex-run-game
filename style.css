@@ -37,4 +37,11 @@ animation: slideright 1200s infinite linear;
     height: 60px;
     position: absolute;
     bottom: 0;
+<<<<<<< HEAD
+=======
+    position:absolute;
+}
+body{
+    background-color: rgb(250,250,250);
+>>>>>>> obstaclefeature
 }
