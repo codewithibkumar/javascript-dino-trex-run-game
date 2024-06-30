@@ -50,6 +50,7 @@ document.addEventListener('DOMContentLoaded',()=>{
      },20)
     }
     function generateObstacles(){
+       if(!isGameOver){
         let obstaclePosition = 1000;
         const obstacle = document.createElement('div');
         obstacle.classList.add('obstacle');
@@ -71,7 +72,8 @@ document.addEventListener('DOMContentLoaded',()=>{
             obstacle.style.left = obstaclePosition + "px";
            
         },20)
-        if(!isGameOver) setTimeout(generateObstacles,randomeTime);
+        setTimeout(generateObstacles,randomeTime);
+       }
     }
     generateObstacles();
 
